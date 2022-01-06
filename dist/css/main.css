@@ -1,13 +1,13 @@
 body {
-  background: #444; }
+  background: black; }
 
-svg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto; }
+body {
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center; }
 
 .rect {
   stroke-dasharray: 610;
@@ -23,10 +23,33 @@ svg {
 .poly {
   stroke-dasharray: 425;
   stroke-dashoffset: -425;
-  animation: draw-poly 2.5s infinite; }
+  animation: draw-poly 2.5s infinite;
+  transform-origin: 50% 50%; }
 
 @keyframes draw-poly {
   from {
-    stroke-dashoffset: -425; }
+    stroke-dashoffset: -425;
+    transform: rotate(0deg); }
   to {
+    stroke-dashoffset: 0;
+    transform: rotate(-360deg); } }
+
+.monkey {
+  stroke: #00c6f3;
+  fill: #a300d5;
+  stroke-width: 4px;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: -2000;
+  animation: monkeyAnim 3s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both; }
+
+@keyframes monkeyAnim {
+  0% {
+    stroke-dashoffset: -2000; }
+  50% {
+    stroke: #a300d5;
+    fill: #00c6f3; }
+  100% {
     stroke-dashoffset: 0; } }
