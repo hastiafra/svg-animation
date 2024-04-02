@@ -1,6 +1,6 @@
 # svg-animation
 
-Adobe Illustrator, HTML, SASS
+Adobe Illustrator, JavaScript, SASS
 
 
 
